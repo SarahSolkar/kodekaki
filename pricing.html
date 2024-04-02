@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kode Kaki</title>
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="./js/authenticate.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <i class="bi bi-code-slash h5 ms-2" style="color: #fff"></i>
+          <span class="ms-3" style="color: #fff">Kode Kaki</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-2">
+            <li class="nav-item ms-5">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item ms-3">
+              <a class="nav-link" href="pricing.html">Pricing</a>
+            </li>
+            <li class="nav-item ms-3">
+              <a class="nav-link" href="documentation.html">Documentation</a>
+            </li>
+            <li class="nav-item ms-3">
+              <a class="nav-link" onclick="logout()">Log Out</a>
+            </li>
+          </ul>
+          <button
+            type="button"
+            class="btn btn-danger btn-circle btn-xl shadow"
+            onclick="location.href='documentation.html'"
+          >
+            SS
+          </button>
+        </div>
+      </div>
+    </nav>
+    <div class="wrap">
+      <div class="row justify-content-center mt-5 main">
+        <div class="col-md-10">
+          <div class="row justify-content-center mt-5 m-1">
+            <div class="col-md-3">
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  src="assets/code.jpg"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <h5 class="card-title text-muted text-uppercase text-center">
+                    Free
+                  </h5>
+                  <h6 class="card-price text-center">
+                    $0<span class="period">/month</span>
+                  </h6>
+                  <hr />
+                  <ul class="fa-ul">
+                    <li>
+                      <span class="fa-li"><i class="fas fa-check"></i></span
+                      >Single User
+                    </li>
+                    <li>
+                      <span class="fa-li"><i class="fas fa-check"></i></span>5GB
+                      Storage
+                    </li>
+                    <li>
+                      <span class="fa-li"><i class="fas fa-check"></i></span
+                      >Unlimited Public Projects
+                    </li>
+                    <li>
+                      <span class="fa-li"><i class="fas fa-check"></i></span
+                      >Community Access
+                    </li>
+                    <li class="text-muted">
+                      <span class="fa-li"><i class="fas fa-times"></i></span
+                      >Unlimited Private Projects
+                    </li>
+                    <li class="text-muted">
+                      <span class="fa-li"><i class="fas fa-times"></i></span
+                      >Dedicated Phone Support
+                    </li>
+                    <li class="text-muted">
+                      <span class="fa-li"><i class="fas fa-times"></i></span
+                      >Free Subdomain
+                    </li>
+                    <li class="text-muted">
+                      <span class="fa-li"><i class="fas fa-times"></i></span
+                      >Monthly Status Reports
+                    </li>
+                  </ul>
+                  <div class="d-grid">
+                    <a href="#" class="btn btn-primary text-uppercase"
+                      >Purchase</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  src="assets/code.jpg"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <h5 class="card-title text-muted text-uppercase text-center">
+                    Small Team
+                  </h5>
+                  <h6 class="card-price text-center">
+                    $20<span class="period">/month</span>
+                  </h6>
+                  <hr />
+                  <ul class="fa-ul">
+                    <li>
+                      <span class="fa-li"><i class="fas fa-check"></i></span
+                      >Single User
+                    </li>
+                    <li>
+                      <span class="fa-li"><i class="fas fa-check"></i></span>5GB
+                      Storage
+                    </li>
+                    <li>
+                      <span class="fa-li"><i class="fas fa-check"></i></span
+                      >Unlimited Public Projects
+                    </li>
+                    <li>
+                      <span class="fa-li"><i class="fas fa-check"></i></span
+                      >Community Access
+                    </li>
+                    <li class="text-muted">
+                      <span class="fa-li"><i class="fas fa-times"></i></span
+                      >Unlimited Private Projects
+                    </li>
+                    <li>
+                      <span class="fa-li"><i class="fas fa-times"></i></span
+                      >Dedicated Phone Support
+                    </li>
+                    <li class="text-muted">
+                      <span class="fa-li"><i class="fas fa-times"></i></span
+                      >Free Subdomain
+                    </li>
+                    <li class="text-muted">
+                      <span class="fa-li"><i class="fas fa-times"></i></span
+                      >Monthly Status Reports
+                    </li>
+                  </ul>
+                  <div class="d-grid">
+                    <a href="#" class="btn btn-primary text-uppercase"
+                      >Purchase</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  src="assets/code.jpg"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <h5 class="card-title text-muted text-uppercase text-center">
+                    Enterprise
+                  </h5>
+                  <h6 class="card-price text-center">
+                    $50<span class="period">/month</span>
+                  </h6>
+                  <hr />
+                  <ul class="fa-ul">
+                    <li>
+                      <span class="fa-li"><i class="fas fa-check"></i></span
+                      >Single User
+                    </li>
+                    <li>
+                      <span class="fa-li"><i class="fas fa-check"></i></span>5GB
+                      Storage
+                    </li>
+                    <li>
+                      <span class="fa-li"><i class="fas fa-check"></i></span
+                      >Unlimited Public Projects
+                    </li>
+                    <li>
+                      <span class="fa-li"><i class="fas fa-check"></i></span
+                      >Community Access
+                    </li>
+                    <li>
+                      <span class="fa-li"><i class="fas fa-times"></i></span
+                      >Unlimited Private Projects
+                    </li>
+                    <li>
+                      <span class="fa-li"><i class="fas fa-times"></i></span
+                      >Dedicated Phone Support
+                    </li>
+                    <li>
+                      <span class="fa-li"><i class="fas fa-times"></i></span
+                      >Free Subdomain
+                    </li>
+                    <li class="text-muted">
+                      <span class="fa-li"><i class="fas fa-times"></i></span
+                      >Monthly Status Reports
+                    </li>
+                  </ul>
+                  <div class="d-grid">
+                    <a href="#" class="btn btn-primary text-uppercase"
+                      >Purchase</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  src="assets/code.jpg"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <h5 class="card-title text-muted text-uppercase text-center">
+                    Kode Kaki Pro
+                  </h5>
+                  <h6 class="card-price text-center">
+                    $100<span class="period">/month</span>
+                  </h6>
+                  <hr />
+                  <ul class="fa-ul">
+                    <li>
+                      <span class="fa-li"><i class="fas fa-check"></i></span
+                      >Single User
+                    </li>
+                    <li>
+                      <span class="fa-li"><i class="fas fa-check"></i></span>5GB
+                      Storage
+                    </li>
+                    <li>
+                      <span class="fa-li"><i class="fas fa-check"></i></span
+                      >Unlimited Public Projects
+                    </li>
+                    <li>
+                      <span class="fa-li"><i class="fas fa-check"></i></span
+                      >Community Access
+                    </li>
+                    <li>
+                      <span class="fa-li"><i class="fas fa-times"></i></span
+                      >Unlimited Private Projects
+                    </li>
+                    <li>
+                      <span class="fa-li"><i class="fas fa-times"></i></span
+                      >Dedicated Phone Support
+                    </li>
+                    <li>
+                      <span class="fa-li"><i class="fas fa-times"></i></span
+                      >Free Subdomain
+                    </li>
+                    <li>
+                      <span class="fa-li"><i class="fas fa-times"></i></span
+                      >Monthly Status Reports
+                    </li>
+                  </ul>
+                  <div class="d-grid">
+                    <a href="#" class="btn btn-primary text-uppercase"
+                      >Purchase</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-light footer">
+      <div class="container py-3">
+        <div class="row py-5">
+          <div class="col-md-4 mb-3 mb-md-0">
+            <h6 class="text-uppercase mb-3 header-color">Address</h6>
+            <span class="other-color">
+              Sher-e-Punjab, Marol Fort, Mumbai, Maharashtra 400059.
+            </span>
+          </div>
+          <div class="col-md-4 mb-3 mb-md-0">
+            <h6 class="text-uppercase mb-3 header-color">Contact Us</h6>
+            <ul class="list-unstyled mb-0 other-color">
+              <li><a href="#!" class="other-color">info@kodekaki.com</a></li>
+              <li>Phone:703-993-1000</li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h6 class="text-uppercase mb-3 header-color">Social media</h6>
+            <div class="row">
+              <ul class="list-inline">
+                <li class="list-inline-item">
+                  <a
+                    href="https://twitter.com/uni_mumbai?lang=en"
+                    target="_blank"
+                  >
+                    <i class="bi bi-twitter-x h4 other-color"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a
+                    href="https://www.instagram.com/muinfo/?hl=en"
+                    target="_blank"
+                  >
+                    <i class="bi bi-instagram h3 other-color"></i
+                  ></a>
+                </li>
+                <li class="list-inline-item">
+                  <a
+                    href="https://in.linkedin.com/school/university-of-mumbai/"
+                    target="_blank"
+                  >
+                    <i class="bi bi-linkedin h3 other-color"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a
+                    href="https://www.youtube.com/c/UniversityofMumbai_UOM"
+                    target="_blank"
+                  >
+                    <i class="bi bi-youtube h3 other-color"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="border-top pt-2">
+          <div class="row">
+            <div class="col-md-6 text-center text-md-start">
+              <p class="small mb-0 text-muted">
+                &copy; 2024, All rights reserved.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

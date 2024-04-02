@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kode Kaki</title>
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="./js/login.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="row justify-content-center main" style="margin-top: 100px">
+        <div class="col-md-10">
+          <div class="row">
+            <div class="col-md-7">
+              <div class="card shadow">
+                <div class="row">
+                  <div class="col-md-12">
+                    <img
+                      src="assets/header-chat-box.png"
+                      alt="chatbot"
+                      width="100%"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row justify-content-center mt-2">
+                <div class="col-md-7">
+                  <span id="element"></span>
+
+                  <!-- Load library from the CDN -->
+                  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+                  <!-- Setup and start animation! -->
+                  <script>
+                    var typed = new Typed("#element", {
+                      strings: [
+                        " <h6 class='display-6' style='color: #2e5cb8'>Make things happen!</h6>",
+                      ],
+                      typeSpeed: 30,
+                      fadeOut: true,
+                      loop: false,
+                      startDelay: 2000,
+                      showCursor: false,
+                    });
+                  </script>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div class="card shadow m-1">
+                <div class="row justify-content-center m-2">
+                  <div class="col-md-10 mt-4">
+                    <div class="card-title h4 text-center header-color">
+                      Login
+                    </div>
+                    <hr />
+                    <div class="row mt-4">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">Email address</label>
+                          <input
+                            type="email"
+                            class="form-control"
+                            id="email"
+                            aria-describedby="emailHelp"
+                            placeholder="jsmith@gmail.com"
+                          />
+                        </div>
+                        <p id="result"></p>
+                        <div class="form-group mt-4">
+                          <label for="exampleInputPassword1">Password</label>
+                          <input
+                            type="password"
+                            class="form-control"
+                            id="password"
+                            placeholder="Password"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row mt-5 justify-content-center mb-3">
+                      <div class="col-md-3">
+                        <button
+                          class="btn shadow ps-4 pe-4"
+                          type="submit"
+                          style="background-color: #2e5cb8; color: #fff"
+                          onclick="login()"
+                        >
+                          Login
+                        </button>
+                      </div>
+                    </div>
+                    <div class="row justify-content-center">
+                      <div class="col-md-4">
+                        <p style="color: darkgrey; font-size: small">
+                          Forgot Password?
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const validateEmail = (email) => {
+        return email.match(
+          /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        );
+      };
+
+      const validate = () => {
+        const $result = $("#result");
+        const email = $("#email").val();
+        $result.text("");
+
+        if (validateEmail(email)) {
+          $result.text(email + " is valid.");
+          $result.css("color", "green");
+        } else {
+          $result.text(email + " is invalid.");
+          $result.css("color", "red");
+        }
+        return false;
+      };
+
+      $("#email").on("input", validate);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kode Kaki</title>
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <script src="./js/authenticate.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <i class="bi bi-code-slash h5 ms-2" style="color: #fff"></i>
+          <span class="ms-3" style="color: #fff">Kode Kaki</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-2">
+            <li class="nav-item ms-5">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item ms-3">
+              <a class="nav-link" href="pricing.html">Pricing</a>
+            </li>
+            <li class="nav-item ms-3">
+              <a class="nav-link" href="documentation.html">Documentation</a>
+            </li>
+            <li class="nav-item ms-3">
+              <a class="nav-link" onclick="logout()">Log Out</a>
+            </li>
+          </ul>
+          <button
+            type="button"
+            class="btn btn-danger btn-circle btn-xl shadow"
+            onclick="location.href='documentation.html'"
+          >
+            SS
+          </button>
+        </div>
+      </div>
+    </nav>
+    <div class="wrap">
+      <div class="row justify-content-center main">
+        <div class="col-md-10">
+          <div class="row justify-content-center mt-3 m-1" id="sample1">
+            <div class="col-md-4">
+              <div class="card shadow">
+                <img
+                  class="card-img-top"
+                  src="assets/code.jpg"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Login Form</h5>
+                  <p class="card-text">
+                    Some quick sample code to build different UI components.
+                  </p>
+                  <button
+                    class="btn btn-primary"
+                    onclick="switchVisible('login form')"
+                  >
+                    Check Sample
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card shadow">
+                <img
+                  class="card-img-top"
+                  src="assets/code.jpg"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Shopping Cart</h5>
+                  <p class="card-text">
+                    Some quick sample code to build different UI components.
+                  </p>
+                  <button
+                    class="btn btn-primary"
+                    onclick="switchVisible('shopping cart')"
+                  >
+                    Check Sample
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card shadow">
+                <img
+                  class="card-img-top"
+                  src="assets/code.jpg"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Navbar</h5>
+                  <p class="card-text">
+                    Some quick sample code to build different UI components.
+                  </p>
+                  <button
+                    class="btn btn-primary"
+                    onclick="switchVisible('navigation bar')"
+                  >
+                    Check Sample
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center mt-5" id="sample2">
+            <div class="col-md-12">
+              <div class="card shadow" style="height: 55vh">
+                <div
+                  class="row justify-content-center"
+                  style="overflow-y: auto"
+                >
+                  <div class="col-md-10">
+                    <div class="card-body" id="content"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-light footer">
+      <div class="container py-3">
+        <div class="row justify-content-center py-4">
+          <div class="col-md-8">
+            <div class="input-group">
+              <span class="input-group-text" id="basic-addon1">
+                <i class="bi bi-code-slash"></i>
+              </span>
+              <input
+                type="text"
+                id="userInput"
+                class="form-control"
+                placeholder="Ask KodeKaki for UI solutions"
+                aria-label="Ask KodeKaki for UI solutions"
+                aria-describedby="basic-addon1"
+              />
+              <div class="input-group-append">
+                <button
+                  class="btn ps-4 pe-4"
+                  type="submit"
+                  style="background-color: #2e5cb8; color: #fff"
+                  onclick="switchVisible()"
+                >
+                  <i class="bi bi-search"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border-top pt-2">
+          <div class="row">
+            <div class="col-md-6 text-center text-md-start">
+              <p class="small mb-0 text-muted">
+                &copy; 2024, All rights reserved.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      function switchVisible(sample) {
+        const utterances = [
+          ["how are you", "how is life", "how are things"], //0
+          ["hi", "hey", "hello", "good morning", "good afternoon"], //1
+          ["what are you doing", "what is going on", "what is up"], //2
+          ["how old are you"], //3
+          [
+            "who are you",
+            "are you human",
+            "are you bot",
+            "are you human or bot",
+          ], //4
+          [
+            "can you give me sample code for login form?",
+            "login form",
+            "give login form",
+          ], //5
+          [
+            "can you give me sample code for shopping cart?",
+            "shopping cart",
+            "give shopping cart",
+          ], // 6
+          [
+            "can you give me sample code for navbar?",
+            "navigation bar",
+            "give navigation bar",
+          ], // 6
+        ];
+
+        // Possible responses corresponding to triggers
+        const answers = [
+          [
+            "Fine... how are you?",
+            "Pretty well, how are you?",
+            "Fantastic, how are you?",
+          ], //0
+          ["Hello!", "Hi!", "Hey!", "Hi there!", "Howdy"], //1
+          [
+            "Nothing much",
+            "About to go to sleep",
+            "Can you guess?",
+            "I don't know actually",
+          ], //2
+          ["I am infinite"], //3
+          ["I am just a bot", "I am a bot. What are you?"], //4
+          [
+            `
+            <h4>Sample UI</h4> <br>
+            <h5>Login Form</h5>
+            <form>
+                <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" class="form-control" id="username" placeholder="Enter username">
+                </div>
+                <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" class="form-control" id="password" placeholder="Enter password">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <br>
+            <h6>Sample Code <i class="bi bi-clipboard"></i></h6> 
+            <div style='border:1px solid #2e5cb8; background-color:#efefef'>
+              <pre>
+              <code>
+                &lt;h5&gt;Login Form&lt;/h5&gt;
+                &lt;form&gt;
+                    &lt;div class="form-group"&gt;
+                      &lt;label for="username"&gt;Username:&lt;/label&gt;
+                      &lt;input type="text" class="form-control" id="username" placeholder="Enter username"&gt;
+                    &lt;/div&gt;
+                    &lt;div class="form-group"&gt;
+                      &lt;label for="password"&gt;Password:&lt;/label&gt;
+                      &lt;input type="password" class="form-control" id="password" placeholder="Enter password"&gt;
+                    &lt;/div&gt;
+                    &lt;button type="submit" class="btn btn-primary"&gt;Submit&lt;/button&gt;
+                &lt;/form&gt;                
+              </code>
+            </pre>
+            </div>
+            `,
+          ], // 5
+          [
+            `
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+              <meta charset="UTF-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <title>Shopping Cart</title>
+              <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+              <link rel="stylesheet" href="styles.css">
+            </head>
+            <body>
+              <div class="container">
+                <h5>Shopping Cart</h5>
+                <div class="row">
+                  <div class="col-md-8">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Product 1</h5>
+                        <p class="card-text">$10.99</p>
+                        <a href="#" class="btn btn-primary">Remove</a>
+                      </div>
+                    </div>
+                    <div class="card mt-3">
+                      <div class="card-body">
+                        <h5 class="card-title">Product 2</h5>
+                        <p class="card-text">$19.99</p>
+                        <a href="#" class="btn btn-primary">Remove</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Cart Summary</h5>
+                        <ul class="list-group">
+                          <li class="list-group-item">Product 1 - $10.99</li>
+                          <li class="list-group-item">Product 2 - $19.99</li>
+                          <li class="list-group-item"><strong>Total: $30.98</strong></li>
+                        </ul>
+                        <button class="btn btn-success btn-block mt-3">Checkout</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </body>
+            </html>
+
+          <h6>Sample Code <i class="bi bi-clipboard"></i></h6> 
+            <div style='border:1px solid #2e5cb8; background-color:#efefef'>
+              <pre>
+              <code>
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang="en"&gt;
+                &lt;head&gt;
+                  &lt;meta charset="UTF-8"&gt;
+                  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                  &lt;title&gt;Shopping Cart&lt;/title&gt;
+                  &lt;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"&gt;
+                  &lt;link rel="stylesheet" href="styles.css"&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                  &lt;div class="container"&gt;
+                    &lt;h5&gt;Shopping Cart&lt;/h5&gt;
+                    &lt;div class="row"&gt;
+                      &lt;div class="col-md-8"&gt;
+                        &lt;div class="card"&gt;
+                          &lt;div class="card-body"&gt;
+                            &lt;h5 class="card-title"&gt;Product 1&lt;/h5&gt;
+                            &lt;p class="card-text"&gt;$10.99&lt;/p&gt;
+                            &lt;a href="#" class="btn btn-primary"&gt;Remove&lt;/a&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="card mt-3"&gt;
+                          &lt;div class="card-body"&gt;
+                            &lt;h5 class="card-title"&gt;Product 2&lt;/h5&gt;
+                            &lt;p class="card-text"&gt;$19.99&lt;/p&gt;
+                            &lt;a href="#" class="btn btn-primary"&gt;Remove&lt;/a&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;div class="col-md-4"&gt;
+                        &lt;div class="card"&gt;
+                          &lt;div class="card-body"&gt;
+                            &lt;h5 class="card-title"&gt;Cart Summary&lt;/h5&gt;
+                            &lt;ul class="list-group"&gt;
+                              &lt;li class="list-group-item"&gt;Product 1 - $10.99&lt;/li&gt;
+                              &lt;li class="list-group-item"&gt;Product 2 - $19.99&lt;/li&gt;
+                              &lt;li class="list-group-item"&gt;&lt;strong&gt;Total: $30.98&lt;/strong&gt;&lt;/li&gt;
+                            &lt;/ul&gt;
+                            &lt;button class="btn btn-success btn-block mt-3"&gt;Checkout&lt;/button&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;               
+              </code>
+            </pre>
+            </div>
+          `,
+          ], // 6
+          [
+            `
+            <!DOCTYPE html>
+            <html lang="en">
+              <head>
+                <meta charset="UTF-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <title>Navbar Example</title>
+                <link
+                  rel="stylesheet"
+                  href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+                />
+                <link rel="stylesheet" href="styles.css" />
+              </head>
+              <body>
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                  <div class="container">
+                    <a class="navbar-brand" href="#">Navbar</a>
+                    <button
+                      class="navbar-toggler"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#navbarSupportedContent"
+                      aria-controls="navbarSupportedContent"
+                      aria-expanded="false"
+                      aria-label="Toggle navigation"
+                    >
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                          <a class="nav-link" href="#"
+                            >Home <span class="sr-only">(current)</span></a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Services</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Contact</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </nav>
+              </body>
+            </html>
+              <br>
+              <h6>Sample Code <i class="bi bi-clipboard"></i></h6> 
+              <div style='border:1px solid #2e5cb8; background-color:#efefef'>
+                <pre>
+                <code>
+                  &lt;!DOCTYPE html&gt;
+                  &lt;html lang="en"&gt;
+                    &lt;head&gt;
+                      &lt;meta charset="UTF-8" /&gt;
+                      &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+                      &lt;title&gt;Navbar Example&lt;/title&gt;
+                      &lt;link
+                        rel="stylesheet"
+                        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+                      /&gt;
+                      &lt;link rel="stylesheet" href="styles.css" /&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                      &lt;nav class="navbar navbar-expand-lg navbar-dark bg-dark"&gt;
+                        &lt;div class="container"&gt;
+                          &lt;a class="navbar-brand" href="#"&gt;Navbar&lt;/a&gt;
+                          &lt;button
+                            class="navbar-toggler"
+                            type="button"
+                            data-toggle="collapse"
+                            data-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent"
+                            aria-expanded="false"
+                            aria-label="Toggle navigation"
+                          &gt;
+                            &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+                          &lt;/button&gt;
+
+                          &lt;div class="collapse navbar-collapse" id="navbarSupportedContent"&gt;
+                            &lt;ul class="navbar-nav mr-auto"&gt;
+                              &lt;li class="nav-item active"&gt;
+                                &lt;a class="nav-link" href="#"
+                                  &gt;Home &lt;span class="sr-only"&gt;(current)&lt;/span&gt;&lt;/a
+                                &gt;
+                              &lt;/li&gt;
+                              &lt;li class="nav-item"&gt;
+                                &lt;a class="nav-link" href="#"&gt;About&lt;/a&gt;
+                              &lt;/li&gt;
+                              &lt;li class="nav-item"&gt;
+                                &lt;a class="nav-link" href="#"&gt;Services&lt;/a&gt;
+                              &lt;/li&gt;
+                              &lt;li class="nav-item"&gt;
+                                &lt;a class="nav-link" href="#"&gt;Contact&lt;/a&gt;
+                              &lt;/li&gt;
+                            &lt;/ul&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/nav&gt;
+                    &lt;/body&gt;
+                  &lt;/html&gt;             
+                </code>
+              </pre>
+              </div>
+          `,
+          ], // 7
+        ];
+        if (document.getElementById("sample1")) {
+          document.getElementById("sample1").style.display = "none";
+          document.getElementById("sample2").style.display = "block";
+        }
+        const input = document.getElementById("userInput");
+        let inputValue = "";
+        if (!sample) {
+          inputValue = input.value;
+        } else {
+          inputValue = sample;
+        }
+        const currentTime = new Date().toLocaleTimeString([], {
+          hour: "2-digit",
+          minute: "2-digit",
+        });
+        const response = compare(utterances, answers, inputValue.toLowerCase());
+        let typed = new Typed("#content", {
+          strings: [response],
+          typeSpeed: 0,
+          fadeOut: true,
+          loop: false,
+          showCursor: false,
+        });
+        // Clear input field
+        input.value = "";
+      }
+      function compare(utterances, answers, inputValue) {
+        let item;
+        for (let x = 0; x < utterances.length; x++) {
+          for (let y = 0; y < utterances[x].length; y++) {
+            if (utterances[x][y] === inputValue) {
+              items = answers[x];
+              item = items[Math.floor(Math.random() * items.length)];
+            }
+          }
+        }
+        return item;
+      }
+    </script>
+  </body>
+</html>
